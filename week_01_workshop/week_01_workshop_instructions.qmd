@@ -1,4 +1,11 @@
-anva--- title: "Week 1: Set Up Your AI‑Course Portfolio Website" format: html: toc: true number-sections: true ---
+--- 
+title: "Week 1: Set Up Your AI‑Course Portfolio Website" 
+format: 
+  html:
+    toc: true
+    number-sections: true
+author: "The Graph Courses"
+---
 
 ## Overview {.unnumbered}
 
