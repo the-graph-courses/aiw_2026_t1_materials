@@ -242,12 +242,98 @@ While powerful, LLMs and AI agents have limitations, especially with large, unst
 
 # Part 4: Optional - Add to Your GitHub Pages Portfolio
 
-You're encouraged to add this report to your GitHub Pages portfolio.
+As a final step, you can add your report to your portfolio website which you created earlier in the course.
 
-1.  **Upload Your Report:** Add your final report file to the same GitHub repository that hosts your portfolio website.
-2.  **Get the Link:** Once the report is uploaded to your GitHub repository, navigate to the file and get its direct link. Usually, you can right-click the file and "Copy Link Address".
-3.  **Update Your Portfolio:**
-    -   You can ask ChatGPT (or a similar LLM) to help you update your `index.html` file. If you have your previous ChatGPT conversation for building the site, you can continue it. Otherwise, you might start a new conversation, provide the content of your existing `index.html` file, and then give your update request.
-    -   ChatGPT will provide updated `index.html` code. Carefully replace the entire content of your `index.html` file in your GitHub repository with this new code.
-    -   Commit and push the changes to GitHub.
-    -   Verify that your live GitHub Pages site shows the new entry and that the link to your report works correctly. This may take a few minutes to update.
+## Upload Your Report to GitHub
+
+-   To get back to your repository home, visit github.com, click on your profile at the top right, then click on "Repositories"
+
+    ![](images/github_repositories.jpg){width="324"}
+
+-   Locate and click on your repository, which should be called something like `graph-ai-portfolio`
+
+-   Locate the button or icon to "Add file". Click on it and select "Upload file"
+
+    ![](images/add_file_button.jpg){width="459"}
+
+-   Drag your final report file (HTML or PDF) into the box, then click on "Commit changes"
+
+## Update Your Portfolio with ChatGPT or Gemini
+
+-   Go to ChatGPT or Gemini and start typing a prompt like the one below. The parts in square brackets will need to be filled in with information you'll gather in the next steps.
+
+    ```         
+    I want to update my portfolio website. In your response, you will provide the FULL updated HTML code for the index.html file.
+
+    The portfolio website is hosted at 
+
+    [YOUR PORTFOLIO WEBSITE URL HERE].
+
+    ---
+
+    I want to add a new link for the project page for "Workshop 3: Job Market Data Analysis".
+
+    For this project, I used LLMs in Google Sheets to extract information from job postings, then analyzed the data with AI tools to explore relationships between experience requirements, programming languages, and salaries.
+
+    The report is available at the link below. (If the link is a PDF file, then we will embed the link directly. If it is an HTML file, we will reformat the link to be a clickable github pages link, as it is hosted on the same GitHub repo as the portfolio website.)
+
+    [PASTE THE DIRECT LINK TO YOUR UPLOADED REPORT FILE HERE]
+
+    ---
+
+    Below is my current HTML file:
+
+    [PASTE THE ENTIRE HTML FILE HERE]
+    ```
+
+-   Now, gather the information you need to complete the prompt:
+
+## Get Your Portfolio Website URL
+
+-   To get your portfolio website URL, go to your portfolio repository on GitHub. You can do this by clicking on the "Repositories" button at the top right of the page and then clicking on your portfolio repository.
+
+-   Click on the "Settings" tab.
+
+-   Scroll down to the "GitHub Pages" section.
+
+-   Your portfolio website URL will be listed under "GitHub Pages". Copy and paste this into your prompt.
+
+    ![](images/github_pages_url.jpg){width="378"}
+
+## Get the Direct Link to Your Report
+
+-   Go back to your portfolio repository's main page and right‑click on the name of your uploaded report then → **Copy link address**. Paste this into your prompt.
+
+    ![](images/copy_link_address_report.jpg){width="378"}
+
+## Copy Your Current index.html Code
+
+-   Still in your portfolio repository, navigate to your index.html file.
+
+    ![](images/index_html.jpg){width="374"}
+
+-   Copy all the code from the index.html file with the copy code button at the top right. Paste this into your prompt.
+
+    ![](images/copy_code_button.jpg){width="372"}
+
+## Send the Prompt and Update Your File
+
+-   Now that you've filled in all the placeholders, send the prompt to ChatGPT or Gemini
+
+-   Copy the new HTML that the LLM generated → return to your *index.html* on GitHub → click the **edit file** (✎) button at the top right.
+
+    ![](images/edit_file_button.jpg){width="452"}
+
+-   Delete all the existing code in the file, then paste in the new code from ChatGPT or Gemini.
+
+-   At the top right, click the **Commit changes** button.
+
+-   Go to Actions tab (if you have GitHub Pages set up with Actions).
+
+    ![](images/actions_tab.jpg){width="380"}
+
+-   Click on the latest build to observe the build process.
+
+    ![](images/pages_build.jpg){width="353"}
+
+-   After the build is complete, your live site, if refreshed, should now show the new project entry and the link should work!
