@@ -462,10 +462,10 @@ Combine multiple techniques:
 
 ## Additional Resources
 
-- **Official ggplot2 documentation**: [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)
+- **Official ggplot2 documentation**: [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/){target="_blank"}
 - **R Graphics Cookbook**: Comprehensive guide to ggplot2
 - **Data Visualization: A Practical Introduction**: By Kieran Healy
-- **ggplot2 extensions**: [exts.ggplot2.tidyverse.org](https://exts.ggplot2.tidyverse.org/)
+- **ggplot2 extensions**: [exts.ggplot2.tidyverse.org](https://exts.ggplot2.tidyverse.org/){target="_blank"}
 
 ## Advanced Topics to Explore
 

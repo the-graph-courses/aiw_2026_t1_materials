@@ -1,9 +1,9 @@
 # Creating a Google Form for Consultation Inquiries (Copy)
 
-#### [Made by GRAPH Courses Team with Scribe](https://scribehow.com/shared/Creating_a_Google_Form_for_Consultation_Inquiries_Copy__6AU6aqAOReqUO4Zgt3Vm7Q)
+#### [Made by GRAPH Courses Team with Scribe](https://scribehow.com/shared/Creating_a_Google_Form_for_Consultation_Inquiries_Copy__6AU6aqAOReqUO4Zgt3Vm7Q){target="_blank"}
 
 
-1\. Navigate to [https://www.google.com/](https://www.google.com/)
+1\. Navigate to [https://www.google.com/](https://www.google.com/){target="_blank"}
 Click "New"
 Click "New folder"
 
@@ -52,7 +52,7 @@ Click "Publish"
 8\. Click "Publish"
 Click here.
 Click "Copy"
-In a new tab, navigate to [https://docs.google.com/forms/d/e/1FAIpQLSc8zUUseQvGtzMjdU1o8fQnoZ8MMWQnnQw2C2o5IUVE9ah5Iw/viewform](https://docs.google.com/forms/d/e/1FAIpQLSc8zUUseQvGtzMjdU1o8fQnoZ8MMWQnnQw2C2o5IUVE9ah5Iw/viewform)
+In a new tab, navigate to [https://docs.google.com/forms/d/e/1FAIpQLSc8zUUseQvGtzMjdU1o8fQnoZ8MMWQnnQw2C2o5IUVE9ah5Iw/viewform](https://docs.google.com/forms/d/e/1FAIpQLSc8zUUseQvGtzMjdU1o8fQnoZ8MMWQnnQw2C2o5IUVE9ah5Iw/viewform){target="_blank"}
 Click this text field.
 Type "Kene (test) [[tab]] [kendavidn1@gmail.com](mailto:kendavidn1@gmail.com) [[tab]] The Graph Courses (global)"
 Click this field.
@@ -77,7 +77,7 @@ Click "Done"
 ![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/1cef7ac7-7368-4531-9cab-a93b949f3e41/File.webp)
 
 
-11\. In a new tab, navigate to [https://www.make.com/en](https://www.make.com/en)
+11\. In a new tab, navigate to [https://www.make.com/en](https://www.make.com/en){target="_blank"}
 
 
 12\. Click "Accept All Cookies"
@@ -287,12 +287,12 @@ Click "Save"
 
 45\. Now we have the report. we also want the automation to send us an email. \
 \
-normally you can just connect your email with make to send emails from your own email, but with personal gmail accounts the setup is quite time-consuming (see here: <https://www.youtube.com/watch?v=VlDT_D9zjnU>), so we are using the [resend.com](https://resend.com) service as a temporary easy way to send emails from [make.com](https://make.com)\
+normally you can just connect your email with make to send emails from your own email, but with personal gmail accounts the setup is quite time-consuming (see here: [https://www.youtube.com/watch?v=VlDT_D9zjnU](https://www.youtube.com/watch?v=VlDT_D9zjnU){target="_blank"}), so we are using the [resend.com](https://resend.com){target="_blank"} service as a temporary easy way to send emails from [make.com](https://make.com){target="_blank"}\
 \
 Go to resend.com, sign up for an account. On the homepage, there should be button to click to create an api key. create and copy it.
 
 
-46\. Go back to [make.com](https://make.com) \
+46\. Go back to [make.com](https://make.com){target="_blank"} \
 CLick to create a new module, then search for resend, click it \
 Click the "Send an Email" option for esent\
 Click "Creating a connection..."\
@@ -341,6 +341,6 @@ Click "Embed HTML". we'll need this link.
 
 
 54\. go to chatgpt, ask it to embed this consultation form in your github page. (Copy and paste the github page info.... and so on...)
-#### [Made with Scribe](https://scribehow.com/shared/Creating_a_Google_Form_for_Consultation_Inquiries_Copy__6AU6aqAOReqUO4Zgt3Vm7Q)
+#### [Made with Scribe](https://scribehow.com/shared/Creating_a_Google_Form_for_Consultation_Inquiries_Copy__6AU6aqAOReqUO4Zgt3Vm7Q){target="_blank"}
 
 

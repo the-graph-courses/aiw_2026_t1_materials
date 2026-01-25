@@ -22,7 +22,7 @@ In the wild, you will find much more complex automations. Many organizations run
 
 ## Create Your Project Folder
 
-1.  In your browser, navigate to [drive.google.com](https://drive.google.com/)
+1.  In your browser, navigate to [drive.google.com](https://drive.google.com/){target="_blank"}
 2.  Click **New** at the top left → then click **New folder**
 3.  Name the folder something like `GenAI Consultations`
 4.  Double-click to open the folder
@@ -69,7 +69,7 @@ In the wild, you will find much more complex automations. Many organizations run
 
 ## Build Your First Module: Google Sheets Watcher
 
-1.  If you have not yet done so, create a Make.com account. Once done, navigate to <https://www.make.com/en> and sign in.
+1.  If you have not yet done so, create a Make.com account. Once done, navigate to [https://www.make.com/en](https://www.make.com/en){target="_blank"} and sign in.
 
 2.  Click **Create a new scenario**. This may also be called "Create scenario" or "New scenario".
 

@@ -23,7 +23,7 @@ In this session you will try two small but practical GenAI design workflows:
 
 ### 1-A Sign up for Canva Pro Trial
 
-1.  Go to [canva.com](https://www.canva.com/) and sign up for an account or log in.
+1.  Go to [canva.com](https://www.canva.com/){target="_blank"} and sign up for an account or log in.
 2.  Visit the Canva pricing page at [canva.com/pricing](https://www.canva.com/pricing/){target="_blank"}.
 3.  Switch from "Yearly" to "Monthly" billing.
 
@@ -100,7 +100,7 @@ After using "Grab Text", you might see some leftover visual artifacts on the bac
 ::: {.callout-tip title="Side Note"}
 You can also try the "Magic Edit" tool for more complex adjustments.
 
-For advanced photo editing beyond Canva's capabilities, [Photopea](https://www.photopea.com/) is a great free, online alternative to Photoshop, though it has a steeper learning curve.
+For advanced photo editing beyond Canva's capabilities, [Photopea](https://www.photopea.com/){target="_blank"} is a great free, online alternative to Photoshop, though it has a steeper learning curve.
 :::
 
 ### Optional: Add a QR code
@@ -189,7 +189,7 @@ If you want to make some custom edits, you can do so in the following ways.
 **If you chose HTML:**
 
 1.  Copy the HTML code from Claude's response
-2.  Go to **https://app.grapesjs.com/studio** (a free visual HTML editor) and open the editor
+2.  Go to [https://app.grapesjs.com/studio](https://app.grapesjs.com/studio){target="_blank"} (a free visual HTML editor) and open the editor
 3.  Paste the HTML code into the editor
 4.  Use the visual interface to edit the design as needed
 5.  For detailed guidance on editing with GrapesJS, watch this video:

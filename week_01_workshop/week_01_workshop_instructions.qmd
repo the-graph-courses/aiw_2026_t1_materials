@@ -34,9 +34,9 @@ Let's get started!
 
 ## Give the AI model the course information and your CV and ask it to build a portfolio website
 
--   Download the course brochure from [thegraphcourses.org/aiw](https://thegraphcourses.org/aiw).
+-   Download the course brochure from [thegraphcourses.org/aiw](https://thegraphcourses.org/aiw){target="_blank"}.
 
--   If you have a paid ChatGPT account, go to [chatgpt.com](https://chatgpt.com) and select the "Thinking" model. Otherwise, we recommend using Gemini at [gemini.google.com](https://gemini.google.com) and changing the model picker at top left to "Pro" if you still have some pro usage available.
+-   If you have a paid ChatGPT account, go to [chatgpt.com](https://chatgpt.com){target="_blank"} and select the "Thinking" model. Otherwise, we recommend using Gemini at [gemini.google.com](https://gemini.google.com){target="_blank"} and changing the model picker at top left to "Pro" if you still have some pro usage available.
 
 -   **Gemini users only:** Before typing your message, click on the "Tools" button and select "Canvas" from the dropdown menu. This enables Gemini to render your HTML as a live preview.
 
@@ -76,7 +76,7 @@ Let's get started!
 
 ## Create a GitHub account (one‑off)
 
-Github is a platform for hosting and collaborating on code. It is one of the most generous and reliable platforms for freely hosting static websites. We will use it to host your portfolio website. - Visit [github.com](https://github.com) → click **Sign up** and follow the steps.
+Github is a platform for hosting and collaborating on code. It is one of the most generous and reliable platforms for freely hosting static websites. We will use it to host your portfolio website. - Visit [github.com](https://github.com){target="_blank"} → click **Sign up** and follow the steps.
 
 ## Make a new repository
 

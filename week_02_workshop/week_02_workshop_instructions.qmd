@@ -36,10 +36,14 @@ You will choose one of the following tools based on your coding experience:
 
 1.  **Choose Your Data:**
     -   Go to Gapminder's data repository: [https://gapminder.org/data](https://gapminder.org/data){target="_blank"}
-    -   Browse the indicators and **select TWO indicators** of interest that you think might be related:
+    -   Browse the indicators and **decide on TWO indicators** of interest that you think might be related. See below for two key notes on choosing your indicators.
+    -   When you have decided on your two indicators, download the data as a CSV file for each indicator. 
+
+    ![](images/gapminder_download_csv.jpg){width="378"}
+
+    -   **Key Notes on Choosing Your Indicators:**
         -   Make sure data is available for the year 2020, as we will be using this year for our analysis. (Official statistics often take a while to be released; 2020 is old enough that accurate data is likely to be available, and recent enough that the data is still relevant.)
         -   If you have no experience with data analysis, you may want to check with an instructor to make sure the indicators you choose actually make sense to analyze together. You can also fall back on the famous life expectancy vs. GDP per capita relationship.
-    -   For each chosen indicator, download the data as a CSV file.
 
 ------------------------------------------------------------------------
 
@@ -73,23 +77,21 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
 
     -   **Select your tools:**
 
-        -   **Code Language:** Julius can use Python or R. Please select **R** since the GRAPH team is more familiar with R as the GRAPH team is more familiar with R, and the instructions below are written for R.
+        -   **R for Code Language:** Julius can use Python or R. At the top left of the window, select **R** since the GRAPH team is more familiar with R, and the instructions below are written for R.
 
     ![](images/change_code_language.jpg){width="292"}
 
-    -   **AI Model:** It's recommended to switch to the **Claude 4.5 Sonnet** model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.
+    -   **Claude 4.5 Sonnet for AI Model:** It's recommended to switch to the **Claude 4.5 Sonnet** model for potentially better results. The model selection is typically in a dropdown menu at the bottom right of the prompt input box.
 
     ![](images/change_ai_model.jpg){width="349"}
 
-3.  **Chatting with Julius (Example Prompt):**
+3.  **Chatting with Julius:**
 
-First, upload your two CSV files to the conversation. This ensures Julius has access to your data when you give it instructions. You can drag and drop them in, of you can click on the plus button to the bottom left of the chat window and select "Upload file".
+    -   First, upload your two CSV files to the conversation. This ensures Julius has access to your data when you give it instructions. You can drag and drop them in, of you can click on the plus button to the bottom left of the chat window and select "Upload file".
 
-![](images/upload_file.jpg){width="270"}
+    ![](images/upload_file.jpg){width="270"}
 
-Now we will write a prompt to Julius to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to Julius.
-
--   **Chat with Julius Example Prompt:**
+    -   Now we will write a prompt to Julius to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to Julius. The parts in square brackets should be replaced with your actual indicator names.
 
     ```         
     I am writing a report on the relationship between two indicators 

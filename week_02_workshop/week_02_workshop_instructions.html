@@ -154,15 +154,19 @@ window.Quarto = {
 <section id="part-1-general-setup-data-selection-all-students" class="level1">
 <h1>Part 1: General Setup &amp; Data Selection (All Students)</h1>
 <ol type="1">
-<li><strong>Choose Your Data:</strong>
+<li><p><strong>Choose Your Data:</strong></p>
 <ul>
 <li>Go to Gapminder’s data repository: <a href="https://gapminder.org/data" target="_blank">https://gapminder.org/data</a></li>
-<li>Browse the indicators and <strong>select TWO indicators</strong> of interest that you think might be related:
+<li>Browse the indicators and <strong>decide on TWO indicators</strong> of interest that you think might be related. See below for two key notes on choosing your indicators.</li>
+<li>When you have decided on your two indicators, download the data as a CSV file for each indicator.</li>
+</ul>
+<p><img src="images/gapminder_download_csv.jpg" class="img-fluid" width="378"></p>
+<ul>
+<li><strong>Key Notes on Choosing Your Indicators:</strong>
 <ul>
 <li>Make sure data is available for the year 2020, as we will be using this year for our analysis. (Official statistics often take a while to be released; 2020 is old enough that accurate data is likely to be available, and recent enough that the data is still relevant.)</li>
 <li>If you have no experience with data analysis, you may want to check with an instructor to make sure the indicators you choose actually make sense to analyze together. You can also fall back on the famous life expectancy vs.&nbsp;GDP per capita relationship.</li>
 </ul></li>
-<li>For each chosen indicator, download the data as a CSV file.</li>
 </ul></li>
 </ol>
 <hr>
@@ -193,21 +197,22 @@ window.Quarto = {
 <ul>
 <li><p><strong>Select your tools:</strong></p>
 <ul>
-<li><strong>Code Language:</strong> Julius can use Python or R. Please select <strong>R</strong> since the GRAPH team is more familiar with R as the GRAPH team is more familiar with R, and the instructions below are written for R.</li>
+<li><strong>R for Code Language:</strong> Julius can use Python or R. At the top left of the window, select <strong>R</strong> since the GRAPH team is more familiar with R, and the instructions below are written for R.</li>
 </ul></li>
 </ul>
 <p><img src="images/change_code_language.jpg" class="img-fluid" width="292"></p>
 <ul>
-<li><strong>AI Model:</strong> It’s recommended to switch to the <strong>Claude 4.5 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.</li>
+<li><strong>Claude 4.5 Sonnet for AI Model:</strong> It’s recommended to switch to the <strong>Claude 4.5 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu at the bottom right of the prompt input box.</li>
 </ul>
 <p><img src="images/change_ai_model.jpg" class="img-fluid" width="349"></p></li>
-<li><p><strong>Chatting with Julius (Example Prompt):</strong></p></li>
-</ol>
-<p>First, upload your two CSV files to the conversation. This ensures Julius has access to your data when you give it instructions. You can drag and drop them in, of you can click on the plus button to the bottom left of the chat window and select “Upload file”.</p>
-<p><img src="images/upload_file.jpg" class="img-fluid" width="270"></p>
-<p>Now we will write a prompt to Julius to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to Julius.</p>
+<li><p><strong>Chatting with Julius:</strong></p>
 <ul>
-<li><p><strong>Chat with Julius Example Prompt:</strong></p>
+<li>First, upload your two CSV files to the conversation. This ensures Julius has access to your data when you give it instructions. You can drag and drop them in, of you can click on the plus button to the bottom left of the chat window and select “Upload file”.</li>
+</ul>
+<p><img src="images/upload_file.jpg" class="img-fluid" width="270"></p>
+<ul>
+<li>Now we will write a prompt to Julius to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to Julius. The parts in square brackets should be replaced with your actual indicator names.</li>
+</ul>
 <pre><code>I am writing a report on the relationship between two indicators 
 
 1. [TYPE YOUR INDICATOR 1 NAME HERE]
@@ -221,6 +226,8 @@ Run the following steps for the report:
 3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
 4. Create a scatterplot showing the relationship between these two indicators in 2020.
 5. Provide a brief interpretation of the relationship between the two indicators.</code></pre></li>
+</ol>
+<ul>
 <li><p><strong>Review and Refine:</strong> Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. For example, you can ask it to change the title of a plot, or to use a different color scheme.</p></li>
 <li><p>If the AI seems to be going off track or taking too long, look for a square “stop” button (often near the prompt input box) to interrupt it.</p></li>
 </ul>
