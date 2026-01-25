@@ -218,7 +218,7 @@ Both datasets have been added.
 Run the following steps for the report:
 1. For each indicator, briefly view and print the data to understand it first. 
 2. Then subset the data to 2020.
-3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot.
+3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
 4. Create a scatterplot showing the relationship between these two indicators in 2020.
 5. Provide a brief interpretation of the relationship between the two indicators.</code></pre></li>
 <li><p><strong>Review and Refine:</strong> Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. For example, you can ask it to change the title of a plot, or to use a different color scheme.</p></li>
@@ -269,7 +269,7 @@ Run the following steps for the report:
 <p><img src="images/agent_mode.jpg" class="img-fluid" width="357"></p>
 <ul>
 <li><p><strong>Initial Agent Prompt Idea:</strong> Here is an example of an initial agent prompt:</p>
-<pre><code>You are an AI agent that creates R data reports.
+<pre class="update"><code>You are an AI agent that creates R data reports.
 You create reports by writing code to an Rmarkdown file (with github_document output), knitting that file, then reading the output md file to validate your work.
 You repeat this edit, knit, review loop until the reporting task is achieved.
 Use plots, tables, and inline R code where appropriate.

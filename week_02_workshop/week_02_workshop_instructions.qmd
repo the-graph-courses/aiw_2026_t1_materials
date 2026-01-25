@@ -102,7 +102,7 @@ Now we will write a prompt to Julius to help us create a report on the relations
     Run the following steps for the report:
     1. For each indicator, briefly view and print the data to understand it first. 
     2. Then subset the data to 2020.
-    3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot.
+    3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
     4. Create a scatterplot showing the relationship between these two indicators in 2020.
     5. Provide a brief interpretation of the relationship between the two indicators.
     ```
