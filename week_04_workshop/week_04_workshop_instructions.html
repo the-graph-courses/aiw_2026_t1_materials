@@ -113,16 +113,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Verify your email address if needed. (Botpress will send you a verification email to your inbox.)</p></li>
 <li><p>When you first sign up, you may be taken to a screen like the below asking whether you want to “build with AI” or let the Botpress team build for you. Select “build with AI”.</p>
 <p><img src="images/build_with_ai.jpg" class="img-fluid" width="331"></p></li>
-<li><p>You will then see a “Setup” screen. This is not needed. We will set up our bot from scratch. Click on “Skip” at the top right.</p></li>
-</ul>
+<li><p>You will then be asked “How do you want to build?” Select “Botpress Studio” on the left.</p>
+<p><img src="images/select_botpress_studio.jpg" class="img-fluid" width="500"></p></li>
+<li><p>You will then see a “Setup” screen that tries to walk you through the setup process. This is not needed. We will set up our bot from scratch. Click on “Skip” at the top right.</p>
 <p><img src="images/skip_setup.jpg" class="img-fluid" width="536"></p></li>
-<li><p><strong>Open the Bot Studio:</strong></p>
-<ul>
-<li>You will now be brought to your bot’s homepage. To open the bot studio, click on the “Edit in Studio” button at the top right.</li>
-</ul>
-<p><img src="images/edit_in_studio.jpg" class="img-fluid" width="545"></p>
-<ul>
-<li>At this point, botpress may try to get you to sign up for a paid plan. Ignore this either by pressing Escape on the keyboard, or by clicking outside of the pop-up.</li>
+<li><p>You may also see a “Pick your plan” popup. You don’t need to select a paid plan. Simply click anywhere outside the box to dismiss it.</p>
+<p><img src="images/click_to_exit_payment_plans.jpg" class="img-fluid" width="450"></p></li>
 </ul></li>
 </ol>
 </section>
@@ -145,8 +141,8 @@ ul.task-list li input[type="checkbox"] {
 - Provide information about the Graph Courses GenAI syllabus and curriculum based on your knowledge base
 - After answering the user's query, politely ask them whether they might be interested in our upcoming showcase event. These take place on 
 
--  Sunday, November 30, 5pm GMT
--  Wednesday, December 3, 3pm GMT
+-  Sunday, March 8, 5pm GMT
+-  Wednesday, March 11, 3pm GMT
 
 - If they express interest, collect their name and email for registration and record those in the Attendees table tool.
 - Try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. </code></pre>
@@ -160,6 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Find the “Knowledge Base” section under the “Instructions” section</li>
 <li>Drag and drop your CV into the upload box. (If you don’t want any of your personal information online, you can use a fake example CV from the internet, like here: <a href="https://www.careers.ox.ac.uk/files/traditional-cv-examplepdf" target="_blank">https://www.careers.ox.ac.uk/files/traditional-cv-examplepdf</a>)</li>
 <li>Download the syllabus from: <a href="https://drive.google.com/file/d/1NV-Mo2UgXQwdTu_Jv-HtCVnB9Pf2Grng/view" target="_blank">https://drive.google.com/file/d/1NV-Mo2UgXQwdTu_Jv-HtCVnB9Pf2Grng/view</a>, and upload it to the knowledge base.</li>
+<li><strong>Note:</strong> If the bot does not process your PDF CV properly (e.g., it gives incorrect or nonsensical responses about your background), try deleting the PDF from the knowledge base and instead manually copying and pasting the text content of your CV into a plain text file, then uploading that instead.</li>
 </ul></li>
 </ol>
 </section>
@@ -186,9 +183,9 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/new_column_icon.jpg" class="img-fluid"></p></li>
 <li><p><strong>Configure Collection:</strong></p></li>
 </ol>
-<p>Now, we have created the table, we need to tell the bot when and how to use this tool to store data.</p>
+<p>Now, we have created the table, we need to allow the bot to use this table to store data.</p>
 <ul>
-<li>Return to the main configuration area, by clicking on the “Main” icon on the left sidebar</li>
+<li>Return to the main configuration area, by clicking on the “Home” icon on the left sidebar</li>
 </ul>
 <p><img src="images/main_icon.jpg" class="img-fluid"></p>
 <ul>
@@ -199,6 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Click on Tables then the Attendees table, then “Create Rows”. This gives your bot the ability to create rows in that table.</li>
 </ul>
 <p><img src="images/table_tool.jpg" class="img-fluid" width="468"></p>
+<p><img src="images/create_rows.jpg" class="img-fluid" width="468"></p>
 </section>
 <section id="part-5-testing-and-publishing-your-bot" class="level1">
 <h1>Part 5: Testing and Publishing Your Bot</h1>
@@ -216,12 +214,16 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p><strong>Publish:</strong></p>
 <ul>
-<li>Click “Publish” button in the top-right corner</li>
+<li>Click “Publish” button in the top-right corner, then “Publish changes”</li>
 <li>Wait for the publishing process to complete</li>
-</ul></li>
+</ul>
+<p><img src="images/publish_button.jpg" class="img-fluid" width="340"></p></li>
 <li><p><strong>Get Embedding Code:</strong></p>
 <ul>
 <li>After publishing, click on the “Chat Bubble” icon under the Publish menu.</li>
+</ul>
+<p><img src="images/chat_bubble_icon.jpg" class="img-fluid" width="340"></p>
+<ul>
 <li>You’ll be taken to a section where you can edit the chat bubble settings.</li>
 <li>Next, navigate to the “Share” menu and copy the code under “Embed Code”</li>
 </ul>
@@ -234,18 +236,26 @@ ul.task-list li input[type="checkbox"] {
 <section id="part-6a-add-bot-to-your-portfolio" class="level2">
 <h2 class="anchored" data-anchor-id="part-6a-add-bot-to-your-portfolio">Part 6A: Add Bot to Your Portfolio</h2>
 <ol type="1">
-<li><strong>Access Your GitHub Repository:</strong>
+<li><p><strong>Navigate to Your GitHub Repository:</strong></p>
 <ul>
-<li>Go to your GitHub Pages repository where your portfolio is hosted</li>
-<li>Open the <code>index.html</code> file for editing</li>
+<li><p>Go to <a href="https://github.com" target="_blank">github.com</a>. Click on your profile icon at the top right, then click on “Your repositories”.</p>
+<p><img src="images/github_repositories.jpg" class="img-fluid" width="324"></p></li>
+<li><p>Locate and click on your portfolio repository (it should be called something like <code>graph-ai-portfolio</code>).</p></li>
 </ul></li>
-<li><strong>Insert the Bot Code:</strong>
+<li><p><strong>Open Your <code>index.html</code> File for Editing:</strong></p>
+<ul>
+<li><p>In your repository, click on the <code>index.html</code> file.</p>
+<p><img src="images/index_html.jpg" class="img-fluid" width="374"></p></li>
+<li><p>Click the <strong>edit file</strong> (pencil) button at the top right of the file view.</p>
+<p><img src="images/edit_file_button.jpg" class="img-fluid" width="452"></p></li>
+</ul></li>
+<li><p><strong>Insert the Bot Code:</strong></p>
 <ul>
 <li><p>Next, add the Webchat embed code to the head section of your website’s HTML. For example:</p>
-<p><img src="images/head_section.jpg" class="img-fluid" width="456"></p></li>
+<p><img src="images/add_to_head_section.jpg" class="img-fluid" width="456"></p></li>
 <li><p>If you do not feel comfortable making this change yourself, you can ask an LLM to do it for you.</p></li>
 </ul></li>
-<li><strong>Commit and Deploy:</strong>
+<li><p><strong>Commit and Deploy:</strong></p>
 <ul>
 <li>Save your changes to the <code>index.html</code> file</li>
 <li>Commit the changes to your GitHub repository</li>

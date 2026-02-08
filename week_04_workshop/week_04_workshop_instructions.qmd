@@ -38,17 +38,17 @@ Also note that the free account will allow your chatbots to send/receive up to 5
 
         ![](images/build_with_ai.jpg){width="331"}
 
-    -   You will then see a "Setup" screen. This is not needed. We will set up our bot from scratch. Click on "Skip" at the top right.
+    -   You will then be asked "How do you want to build?" Select "Botpress Studio" on the left.
 
-    ![](images/skip_setup.jpg){width="536"}
+        ![](images/select_botpress_studio.jpg){width="500"}
 
-2.  **Open the Bot Studio:**
+    -   You will then see a "Setup" screen that tries to walk you through the setup process. This is not needed. We will set up our bot from scratch. Click on "Skip" at the top right.
 
-    -   You will now be brought to your bot's homepage. To open the bot studio, click on the "Edit in Studio" button at the top right.
+        ![](images/skip_setup.jpg){width="536"}
 
-    ![](images/edit_in_studio.jpg){width="545"}
+    -   You may also see a "Pick your plan" popup. You don't need to select a paid plan. Simply click anywhere outside the box to dismiss it.
 
-    -   At this point, botpress may try to get you to sign up for a paid plan. Ignore this either by pressing Escape on the keyboard, or by clicking outside of the pop-up.
+        ![](images/click_to_exit_payment_plans.jpg){width="450"}
 
 # Part 2: Setting Up the Bot Instructions
 
@@ -69,8 +69,8 @@ You are a portfolio assistant for a Generative AI course student. Your main task
 - Provide information about the Graph Courses GenAI syllabus and curriculum based on your knowledge base
 - After answering the user's query, politely ask them whether they might be interested in our upcoming showcase event. These take place on 
 
--  Sunday, November 30, 5pm GMT
--  Wednesday, December 3, 3pm GMT
+-  Sunday, March 8, 5pm GMT
+-  Wednesday, March 11, 3pm GMT
 
 - If they express interest, collect their name and email for registration and record those in the Attendees table tool.
 - Try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. 
@@ -84,6 +84,7 @@ Our next task is to set up a knowledge base for the bot to use to answer questio
     -   Find the "Knowledge Base" section under the "Instructions" section
     -   Drag and drop your CV into the upload box. (If you don't want any of your personal information online, you can use a fake example CV from the internet, like here: [https://www.careers.ox.ac.uk/files/traditional-cv-examplepdf](https://www.careers.ox.ac.uk/files/traditional-cv-examplepdf){target="_blank"})
     -   Download the syllabus from: [https://drive.google.com/file/d/1NV-Mo2UgXQwdTu_Jv-HtCVnB9Pf2Grng/view](https://drive.google.com/file/d/1NV-Mo2UgXQwdTu_Jv-HtCVnB9Pf2Grng/view){target="_blank"}, and upload it to the knowledge base.
+    -   **Note:** If the bot does not process your PDF CV properly (e.g., it gives incorrect or nonsensical responses about your background), try deleting the PDF from the knowledge base and instead manually copying and pasting the text content of your CV into a plain text file, then uploading that instead.
 
 # Part 4: Set Up Data Collection
 
@@ -107,9 +108,9 @@ Next, we will create a table to store the data of the attendees of the showcase 
 
 2.  **Configure Collection:**
 
-Now, we have created the table, we need to tell the bot when and how to use this tool to store data.
+Now, we have created the table, we need to allow the bot to use this table to store data.
 
--   Return to the main configuration area, by clicking on the "Main" icon on the left sidebar
+-   Return to the main configuration area, by clicking on the "Home" icon on the left sidebar
 
 ![](images/main_icon.jpg)
 
@@ -120,6 +121,8 @@ Now, we have created the table, we need to tell the bot when and how to use this
 -   Click on Tables then the Attendees table, then "Create Rows". This gives your bot the ability to create rows in that table.
 
 ![](images/table_tool.jpg){width="468"}
+
+![](images/create_rows.jpg){width="468"}
 
 # Part 5: Testing and Publishing Your Bot
 
@@ -134,12 +137,18 @@ Now, we have created the table, we need to tell the bot when and how to use this
 
 2.  **Publish:**
 
-    -   Click "Publish" button in the top-right corner
+    -   Click "Publish" button in the top-right corner, then "Publish changes"
     -   Wait for the publishing process to complete
+
+    ![](images/publish_button.jpg){width="340"}
+
 
 3.  **Get Embedding Code:**
 
     -   After publishing, click on the "Chat Bubble" icon under the Publish menu.
+
+    ![](images/chat_bubble_icon.jpg){width="340"}
+
     -   You'll be taken to a section where you can edit the chat bubble settings.
     -   Next, navigate to the "Share" menu and copy the code under "Embed Code"
 
@@ -151,15 +160,31 @@ Now, we need to add this code to your portfolio website, so that a chat bubble a
 
 ## Part 6A: Add Bot to Your Portfolio
 
-1.  **Access Your GitHub Repository:**
-    -   Go to your GitHub Pages repository where your portfolio is hosted
-    -   Open the `index.html` file for editing
+1.  **Navigate to Your GitHub Repository:**
+
+    -   Go to [github.com](https://github.com){target="_blank"}. Click on your profile icon at the top right, then click on "Your repositories".
+
+        ![](images/github_repositories.jpg){width="324"}
+
+    -   Locate and click on your portfolio repository (it should be called something like `graph-ai-portfolio`).
+
+2.  **Open Your `index.html` File for Editing:**
+
+    -   In your repository, click on the `index.html` file.
+
+        ![](images/index_html.jpg){width="374"}
+
+    -   Click the **edit file** (pencil) button at the top right of the file view.
+
+        ![](images/edit_file_button.jpg){width="452"}
+
 2.  **Insert the Bot Code:**
     -   Next, add the Webchat embed code to the head section of your website’s HTML. For example:
 
-        ![](images/head_section.jpg){width="456"}
+        ![](images/add_to_head_section.jpg){width="456"}
 
     -   If you do not feel comfortable making this change yourself, you can ask an LLM to do it for you.
+
 3.  **Commit and Deploy:**
     -   Save your changes to the `index.html` file
     -   Commit the changes to your GitHub repository
