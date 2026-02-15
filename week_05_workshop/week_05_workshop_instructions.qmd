@@ -50,7 +50,7 @@ In the wild, you will find much more complex automations. Many organizations run
 
 1.  Click the Share button at the top right, then copy the responder link.
 
-2.  Open the form in a new tab and submit a test response. You are encouraged to fill in data for an organization you know and care about. Here is an example:
+2.  Paste that link into a new tab to open the form and submit a test response. You are encouraged to fill in data for an organization you know and care about. Here is an example:
 
     -   Name: `John Doe`
     -   Email: `john.doe@example.com`
@@ -236,9 +236,7 @@ Congratulations! You've now built a complete automation that will process new fo
 
 ![](images/turn_on_automation.jpg){width="425"}
 
-Your automation is now live and will process new form submissions automatically (every 15 minutes).
-
-**NOTE:** The scenario runs every 15 minutes by default, checking for and processing any new form submissions. Keep this frequency during testing so you can see results quickly. However, for production use, consider increasing the interval to every 3 hours or more. Each time the scenario checks for new data counts as one operation, and Make.com's free plan provides approximately 1,000 operations per month.
+Your automation is now live and will process new form submissions automatically. Leave the frequency at **every 15 minutes** for now—this will let you quickly verify that everything works end-to-end once the form is on your website. You'll reduce the frequency after testing.
 
 ------------------------------------------------------------------------
 
@@ -267,6 +265,29 @@ Add a new section called "Contact for Consultation" and embed this Google Form:
 
 3.  Update your GitHub Pages website with the LLM's new HTML code
 4.  Commit/Push the changes to make your consultation form live
+
+## Test the Full Pipeline
+
+Now that your form is live on your website and the automation is active, it's time to test the entire pipeline from start to finish.
+
+1.  Visit your deployed GitHub Pages website and fill out the consultation form as if you were a real visitor. Use a different company name than your earlier test so you can easily identify the new submission.
+
+2.  Wait up to 15 minutes for the automation to pick up the new submission.
+
+3.  Go to your **GenAI Consultations** folder in Google Drive and confirm that a new report document has been created for the submission you just made. Open it and review the AI-generated report.
+
+If a new document appears, congratulations—your automation is working end-to-end, from a real website visitor all the way to a generated report!
+
+## Reduce the Checking Frequency
+
+Now that you've confirmed everything works, you should reduce how often the automation checks for new submissions. Each check counts as one **operation**, and Make.com's free plan provides approximately 1,000 operations per month. At every 15 minutes, you'd use up those operations in about 10 days—even if nobody submits the form.
+
+1.  Return to your scenario in Make.com
+2.  Click on the **Every 15 minutes** text (next to the on/off toggle) to open the scheduling settings
+3.  Change the interval to **every 3 hours** (or longer, depending on how quickly you need to respond to inquiries)
+4.  Click **Save**
+
+This way, the automation still runs automatically, but at a pace that is sustainable on the free plan.
 
 ------------------------------------------------------------------------
 
