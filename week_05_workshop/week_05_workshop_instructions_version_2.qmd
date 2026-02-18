@@ -1,22 +1,25 @@
 ---
-title: "Workshop: Automation with Make.com"
+title: "Workshop: Automation with Relay.app"
 format:
   html:
     toc: true
+    toc-depth: 3
 author: "The Graph Courses Team"
 ---
 
 # Introduction
 
-In this workshop, you'll create an automated workflow using Make.com that processes consultation inquiries submitted through a Google Form. The automation will:
+In this workshop, you'll create an automated workflow using [Relay.app](https://relay.app){target="_blank"} that processes consultation inquiries submitted through a Google Form. The automation will:
 
-1.  Monitor a Google Form for new submissions
-2.  Use an AI model to research the potential client's company and generate a report
-3.  Create a formatted Google Doc with the research findings
+1.  Monitor a Google Sheets spreadsheet for new form submissions
+2.  Research the potential client's company using Google Search
+3.  Use an AI model to generate a professional HTML report on GenAI opportunities
+4.  Email you the report as an attachment
 
-The goal here is to build an extremely simple automation that demonstrates the power of connecting different web services with an AI Large Language Model (LLM). Setting up this automation is quite a bit of work, but the beauty of automations of course is that (in theory) you should only need to set it up once!
+The goal here is to build an extremely simple automation that demonstrates the power of connecting different web services with an AI Large Language Model (LLM). With Relay.app's AI assistant, setting this up takes just a few minutes!
 
-In the wild, you will find much more complex automations. Many organizations run a large fraction of their processes using automations on services like Make.com. With the rise of LLMs, these automations can do increasingly complex tasks.
+
+------------------------------------------------------------------------
 
 # Part 1: Setting Up Your Google Form and Data Collection
 
@@ -61,192 +64,150 @@ In the wild, you will find much more complex automations. Many organizations run
 
 4.  Click **Link to Sheets** → **Create** to generate a connected spreadsheet.
 
-5.  Share the spreadsheet by clicking **Share** in the top right → **Copy link**. Copy this link to your clipboard. We will use it in the next section.
+5.  Open the connected spreadsheet. You should see your test response as a row. Keep this tab open — you'll need to point Relay.app to this spreadsheet shortly.
 
 ------------------------------------------------------------------------
 
-# Part 2: Setting Up Make.com Automation
+# Part 2: Building the Automation with Relay.app
 
-## Build Your First Module: Google Sheets Watcher
+## 2.1 sign up for relay account
 
-1.  If you have not yet done so, create a Make.com account. Once done, navigate to [https://www.make.com/en](https://www.make.com/en){target="_blank"} and sign in.
+1. First, sign up for a Relay.app account. Navigate to [relay.app](https://relay.app){target="_blank"} and sign up. You should sign up with the same Google account you used to create your Google Form.
 
-2.  Click **Create a new scenario**. This may also be called "Create scenario" or "New scenario".
+2. You may be asked to add your linkedin profile, this is optional. feel free to skip. 
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-06-06/2a6e92d6-c1a2-4737-93dd-ae062ef61780/File.jpeg?tl_px=148,0&br_px=1525,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=962,5){width="455"}
+## 2.2 start creating a new workflow
 
-3.  Click the plus button to add a new module, and select **Google Sheets**
+3. You will then be brought to a page asking to you select a kind of agent. We will actually not be creating an agent, but rather just a workflow. (We will not be creating an "Agent"; in Relay, an agent is a collection of related workflows which a model can run. We'll stick with individual workflows for this workshop. also workflow is synonym for automation.)
 
-![](images/scenario_new_row.jpg){width="356"}
+To sidestep the agent creation, visit [https://run.relay.app/dashboard](https://run.relay.app/dashboard){target="_blank"}
 
-4.  Choose **Watch New Rows ACID**. This will watch for new rows in the spreadsheet, and trigger when someone fills out the connected form.
+4. NOW, On the left-hand sidebar, click the plus icon to create a new "Workflow". 
 
-5.  Click **Creating a connection...** → **Sign in with Google**
+![Create a new workflow.](images/create_new_workflow_button_n.png){fig-alt="Create a new workflow"}
 
-6.  You may need to select your Google account and authorize access. Give all requested permissions. (Note that you it is only *your* automations that have the access, not the entire Make.com service, so you do not need to worry about data security or leakage.)
+Relat will open the workflow editor, with an AI assistant on the left-hand side.
 
-7.  Now, configure the module settings:
+## 2.3 us the relay app ai assistant to build the workflow
 
-    -   **Spreadsheet ID:** Navigate to and select your consultation form spreadsheet. It should be called something like Consultation Inquiry.
-    -   **Sheet name:** Select "Form Responses 1"
-    -   **Limit:** Set to `1` (processes one response at a time)
-    -   Click **Save**
-    -   If asked where to start, enter `1` into the id field → **Save**
-
-![](images/sheets_boxes.jpg){width="26%"}
-
-### Test the Workflow
-
-Now to test the connection, you need to perform the steps below.
-
-1.  Right-click on the Google Sheets module
-2.  Click **"Choose where to start"**
-
-![](images/choose_where_to_start.jpg){width="200"} 
+rather than manuallly build the automation step by step, we will let the ai assistant.
 
 
-3.  Enter `1` into the id field → **"Save"**
+side note: (needs to be in side note div)
+we have crafted the prompt for you. Knowing how to build such a prompt requires knowing how automations work and so on. So takes some practice. but can be described intuitively in natural lnaguage. KNowing what it is possible to do and what not. Feel free to chat with the agent about these "would it be possible to build a workflow that..." 
 
-Note: If you add a second test row during your testing, you would select `2`, and so on.
+copy the prompt below and paste it in the ai assistant text box.
 
+![Paste your prompt here.](images/paste_your_prompt_here_n.png){fig-alt="Paste your prompt here"}
 
-![](images/test_id_1.jpg){width="291"} 
+**Prompt to paste:**
 
+```
+I have a Google spreadsheet that is updated when clients fill out my contact form.
 
-4.  Click **"Run once"** at the bottom left
+For each new submission, I want a report of genAI opportunities for the client's organization emailed to me.
 
-![](images/run_once.jpg){width="288"}
+First, our automation should research the company, using Google search, returning 2-3 results.
 
-Note that you will need to do this every time you want to test your workflow.
+Then we will use Gemini Flash to draft a report. The report should be rich, colorful, and professional.
 
-If you get no errors, the workflow is working properly. You will also see the data from the form in the spreadsheet.
+The report file should be created with the plain text file tool, but with an HTML extension.
 
-### Save your work
-
-Make does not save your work automatically. You need to click the **Save** icon at the bottom after major changes so that in case you refresh the page or lose connection, you do not lose your work.
-
-![](images/save_button.jpg){width="389"}
-
-------------------------------------------------------------------------
-
-# Part 3: Adding AI Research Capabilities
-
-## Set Up OpenRouter AI Module
-
-1.  Click the **+** button next to the Google Sheets module
-
-2.  Search for **OpenRouter** and select **Create a chat completion**
-
-![](images/openrouter_select.jpg){width="389"}
-
-3.  Click **Create a connection**, then under Connection Type, select **OpenRouter** (not OpenRouter Auth2) and enter the openrouter API key that was emailed to you some time ago.
-
-## Configure the AI Research Prompt
-
-1.  Under **Messages**, click **Add item**
-
-<!-- -->
-
-2.  In the **Content** field, paste a prompt that looks something like:
-
-```         
-A potential client has filled out a form on my website requesting generative AI consulting services. Research the company/organization below and create a clear, simple, and short HTML report that covers an introduction to the business as well as potential generative AI opportunities for their work.
-
-Use emojis, tables and lists for visual appeal while keeping your writing clear and concise.
-
-If you cannot find online information about the company, just indicate so.
-
-Do not include any prelude or postlude.
-
-Important: Citations and links should only be at the very end of the report, not inside the text!
-
-Now, here is the company name and geographic area from the form:
+Finally, an email should be sent to me using the email yourself tool (not gmail), with the report attached. 
 ```
 
-3.  Right after the prompt (in the same box), click into the text area, and the variable selector should come up. Choose the company name field from your Google Form (e.g., "What is your company name...")
+Click the send button to send. 
 
-So each time someone fills out the form, the company name will be added to the prompt, and send to the AI model.
+The model will respond with a plan, then it will ask you to connect to google sheets
 
-<!-- -->
+Click the connect button, and log in with the google account you used to create your Google Form.
 
-4.  Set the **Role** field to **User**
+![Connect to google sheets.](images/connect_to_google_sheets_n.png){fig-alt="Connect to google sheets"}
 
-![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/b4b2b521-eb1d-4524-9efc-3f870e43364e/File.jpeg?tl_px=148,182&br_px=1525,952&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=833,329)
+Google will ask you what permissions to grant to the relay app.
 
-5.  For the **Model** field, first click the "Map" dial, which will allow you to type in any model of your choice. Then in the box, paste in `openai/gpt-5-mini:online`.
-    -   The `online` suffix allows the model to search the internet. So even if the model does know about the company based on its training data, it can still search the internet to research, providing more comprehensive and current information. 
+You want to grant all 3 permissions asked. 
 
-![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/6e4b7179-b274-404a-afda-c350d6e7f45d/File.jpeg?tl_px=148,182&br_px=1525,952&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=869,298)
+![Alt text](images/grant_permissions.jpg)
 
-6.  Click **Save**
+{side note}
+of course, these are fairly liberal permissions. so one might feel worried.  but but relay is a trusted app, vetted by us, with a good track record. Only actions you expliitly set up will be taken. However, if you are still concerned, about security, you can create a blank google account for this purpose. and, quickly recreate your google form and sheet there connect to that instead.
 
-### Test and Save Your Workflow
+Next, you will be asked to select the sheet that holds your contact form responses. do that. 
 
-Now that you have two modules, you should test the workflow again!
+![Select the sheet that holds your contact form responses.](images/select_sheet_n.png){fig-alt="Select the sheet that holds your contact form responses"}
 
-1.  IMPORTANT: As you did before, right-click the Google Sheets module → **Choose where to start** → enter `1` into the id field → **Save**
-2.  Then click **Run once** at the bottom left to test the entire workflow
-3.  If you get no errors, then all is working fine.
-4.  Click the Save icon in the bottom toolbar to save your work.
+The AI will then ask you to test the workflow 
+
+![Test the workflow.](images/test_workflow_n.png){fig-alt="Test the workflow"}
+
+click the button, then select the row you just submitted to your form. 
+
+the workflow will run, and you will see the progres. Eventually you should receive an email with the report. 
+
+To open an HTML report from your gmail, you first need to download the file, then drag and drop it into your browser. 
+
+[side note we are only emailing ourselves here. but you can also easily connect to gmail to email others.]
+
+
+Below is an example report from the process.
+
+![Example report from relay.](images/example_report_relay_n.png){fig-alt="Example report from relay"}
+
+## Step 3 · Make any final adjustments.
+
+If you're happy, 
+
+Depending on whether the initial workflow was successful, you can choose to make any final adjustments.
+
+For example, you might customize the prompt for gemini to be more concise, or customize the search query to be more specific. 
+
+If you want to learn more about how to customize relay automations, we recommend this video: 
+
+[hi assistant, would be nice to properly embed this video, as a small thumbnail with an open in new tab icon]
+https://www.youtube.com/watch?v=JIkqjyKwJDk
+
+(the demo starts around minute 7)
+
+## Step Enable the workflow
+
+
+If you're happy with the report, turn it on so that it runs every time a new row is added to your sheet.
+
+
+Toggle the trigger from **Off** to **On**. The toggle turns green and the workflow is live.
+
+![Turn on instant trigger.](images/turn_on_instant_trigger_n.png){fig-alt="Turn on instant trigger"}
+
+Your automation is now active. Every time a new row is added to your Google Sheet, Relay will research the company, generate a rich HTML report with Gemini, and email it to you as an attachment.
+
+
+## For reference...
+
+For reference, here is what each step should roughly look like.
+
+[hi assistant, embed these properly with reasonable size, but also actually process the image and summarize in text what the student should see for each steo]
+
+[label](images/step_1_new_row_trigger.jpg) 
+[label](images/step_2_research_company.jpg) 
+[label](images/step_3_ai_drafter.jpg) 
+[label](images/step_4_create_text_file_with_html_extension.jpg) 
+[label](images/step_5_email_report_to_self.jpg) 
+
+::: {.callout-tip}
+If any step looks wrong, click on it and edit it manually, or describe the fix to the AI in the chat panel on the left. For example, you might say *"Change the AI model to Gemini Flash"* or *"Make the search return only 2 results"*.
+:::
+
 
 ------------------------------------------------------------------------
 
-# Part 4: Creating Google Docs Reports
-
-## Set Up Google Docs Module
-
-1.  Click the **+** button to add another module
-2.  Search for **Google Docs** and select **Create a document**
-
-![](images/create_docs_module.jpg){width="425"}
-
-3.  For the document **Name**, type: `GenAI Web Report for` then select the company name/geographic area variable from your form
-
-![](images/report_form_name.jpg){width="425"}
-
-4.  For the **Content** field, select the AI response from the variable picker:
-    -   Navigate to OpenRouter variables → **Choices** → **Message** → **Content** and click on **Content**
-
-![](images/report_content_picker.jpg){width="425"}
-
-5.  Under **New document's location folder**, search for and select your "GenAI Consultations" folder
-6.  Click **Save**
-
-### Test and Save Workflow
-
-Run your complete workflow to test again.
-
-IMPORTANT: As you did before, right-click the Google Sheets module → **Choose where to start** → enter `1` into the id field → **Save**
-
-If you get no errors, then all is working fine. Click the Save icon in the bottom toolbar to save your work. 
-
-Check your Google Drive for the newly created report document. If you're unhappy with the report, try editing the prompt and rerunning your test until you get an output that works.
-
-------------------------------------------------------------------------
-
-# Part 5: Activating Your Automation
-
-Congratulations! You've now built a complete automation that will process new form submissions automatically! Let's make it live.
-
-## Set Schedule and Activate
-
-1.  Click the **Save** icon in the bottom toolbar to save your work.
-
-2.  Locate the toggle beside the **Every 15 minutes** text, and turn the automation on. 
-
-![](images/turn_on_automation.jpg){width="425"}
-
-Your automation is now live and will process new form submissions automatically. Leave the frequency at **every 15 minutes** for now—this will let you quickly verify that everything works end-to-end once the form is on your website. You'll reduce the frequency after testing.
-
-------------------------------------------------------------------------
-
-# Part 6: Embedding the Form in Your Website
+# Part 3: Embedding the Form in Your Website
 
 ## Get the Embed Code
 
 1.  Return to your Google Form
 2.  Click the three-dot menu (⋮) in the top right
-3.  Select **Embed**
+3.  Select **Embed HTML**
 4.  Copy the provided HTML embed code
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/390e2496-d4ca-4073-a977-ff9a638f18ff/File.webp)
@@ -255,7 +216,7 @@ Your automation is now live and will process new form submissions automatically.
 
 You'll use an LLM to update your portfolio's HTML to include the consultation form, then push the changes to GitHub.
 
-### Step 1: Copy Your Current Website Code
+### Copy Your Current Website Code
 
 1.  Go to [github.com](https://github.com){target="_blank"}. Click on your profile icon at the top right, then click on **Your repositories**.
 
@@ -271,13 +232,13 @@ You'll use an LLM to update your portfolio's HTML to include the consultation fo
 
     ![](images/copy_code_button.jpg){width="372"}
 
-### Step 2: Ask an LLM to Update the HTML
+### Ask an LLM to Update the HTML
 
 1.  Go to ChatGPT, Gemini, or your preferred LLM.
 
 2.  Provide a prompt like the one below. Paste both your embed code (from the previous step) and your current `index.html` code into the prompt where indicated:
 
-```         
+```
 I want to update my portfolio website to include a consultation form.
 
 Add a new section called "Contact for Consultation" and embed this Google Form:
@@ -291,7 +252,7 @@ Below is my current index.html code. Please return the FULL updated HTML file:
 
 3.  Review the LLM's output to make sure it looks reasonable (e.g., your existing content is still there and a new section has been added).
 
-### Step 3: Update Your Website on GitHub
+### Update Your Website on GitHub
 
 1.  Back in your repository on GitHub, navigate to `index.html` and click the **edit file** (pencil) button at the top right.
 
@@ -315,33 +276,112 @@ Now that your form is live on your website and the automation is active, it's ti
 
 1.  Visit your deployed GitHub Pages website and fill out the consultation form as if you were a real visitor. Use a different company name than your earlier test so you can easily identify the new submission.
 
-2.  Wait up to 15 minutes for the automation to pick up the new submission.
+2.  Wait a minute or two for Relay.app to pick up the new submission. (Relay.app uses event-based triggers, so it should be fairly quick.)
 
-3.  Go to your **GenAI Consultations** folder in Google Drive and confirm that a new report document has been created for the submission you just made. Open it and review the AI-generated report.
+3.  Check your email for the new report. Open the HTML attachment and review the AI-generated report.
 
-If a new document appears, congratulations—your automation is working end-to-end, from a real website visitor all the way to a generated report!
-
-## Reduce the Checking Frequency
-
-Now that you've confirmed everything works, you should reduce how often the automation checks for new submissions. Each check counts as one **operation**, and Make.com's free plan provides approximately 1,000 operations per month. At every 15 minutes, you'd use up those operations in about 10 days—even if nobody submits the form.
-
-1.  Return to your scenario in Make.com
-2.  Click on the **Every 15 minutes** text (next to the on/off toggle) to open the scheduling settings
-3.  Change the interval to **every 3 hours** (or longer, depending on how quickly you need to respond to inquiries)
-4.  Click **Save**
-
-This way, the automation still runs automatically, but at a pace that is sustainable on the free plan.
+If you receive a report, congratulations — your automation is working end-to-end, from a real website visitor all the way to a professional report delivered to your inbox!
 
 ------------------------------------------------------------------------
 
 # Submission
 
-To submit your work:
+To submit your work, take a screenshot showing your completed workflow in Relay.app (showing all the steps) and upload it to the submission box on the course website.
 
-1.  Export and upload your scenario blueprint. At the top right, click the three dots and select **Export Blueprint**.
+------------------------------------------------------------------------
 
-![](images/export_blueprint.jpg){width="425"}
+# Optional Challenge: PubMed Literature Monitor *(ungraded)*
 
-This contains a file that represents your completed workflow. (This means if you wanted you could share, \[or sell!\] your workflows!)
+We're going to 
 
-2.  Upload that file to the submission box on the course website.
+- create a PubMed search query
+- create an RSS feed from the search query
+- build a relay automation that monitors the RSS feed every Monday, summarises the 5 most recent papers, and connects them to your own research background.
+
+
+::: {.callout-tip}
+This optional challenge is for students who finish early and want to explore more. It builds a  different kind of automation — one that monitors academic literature and sends you a personalized weekly digest.
+
+It is more unguided with fewer screenshots, so you will need to be more independent.
+:::
+
+## How to create your PubMed RSS feed
+
+First, you need to create a PubMed search and convert it to an RSS feed.
+
+**1.  Create a search query**
+
+searching on pubmed uses a special syntax called "boolean operators". if you know how to use them you can do it yourself. but we can also use an llm to help us.
+
+you can pick a topic like 
+
+generative AI and epidemiology
+or 
+...
+or 
+...
+any paper about arboviruses in a top 5 medical journal 
+
+[assistant, suggest a few]
+
+Go to an LLM (ChatGPT, Gemini, Claude, etc.) and ask it to help you craft a PubMed Boolean search query. For example:
+
+```
+Help me create a PubMed search query using Boolean operators
+Return just the query string I can paste into PubMed.
+I will use this to create a weekly RSS eventually
+The topic is:
+[YOUR TOPIC HERE]
+
+```
+
+replace [YOUR TOPIC HERE] with the topic you picked.
+
+The model will respond with a query string likt his: 
+
+**2.  Search PubMed**
+
+Go to [pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov){target="_blank"} and paste your Boolean search query into the search box and press **Search**.
+
+::: {.callout-tip}
+Aim for a query that returns somewhere between 100–1000 total results on PubMed. Too broad (thousands of results) gives generic papers; too narrow gives nothing new each week. Check the result count on the PubMed results page before creating the feed. If needed, go back to the LLM to refine the query.
+:::
+
+
+Just below the search bar, click the **Create RSS** link.
+
+![Alt text](images/create_rss_button.jpg)
+
+
+Change *Number of items displayed* to **10**, then click **Create RSS**. A URL appears in the *Your RSS Feed Link* box — copy it.
+
+![Alt text](images/rss_settings.jpg)
+
+## Build the Relay automation
+
+As you did before, create a new workflow in relay.app.
+
+Using the ai assistant, paste the prompt below. **Replace the RSS URL** with your own, and **replace the CV blurb** with a short summary of your own background. 
+
+(For a summary of your background, you can use an LLM to summarize your CV)
+
+```
+Every Monday morning, we want to get the latest 10 publications from this RSS feed:
+
+[PASTE YOUR PUBMED RSS URL HERE]
+
+Using Gemini Flash, summarize each one in a single line and include the link to the full publication.
+
+Then, at the end of the report, using my CV summary below as context,
+mention a few ways any of these publications might be relevant to my own work.
+
+Send the whole thing to me using the Email Yourself tool (not Gmail).
+
+My professional background:
+
+[PASTE YOUR OWN PROFESSIONAL BACKGROUND HERE]
+```
+
+Review the steps the AI builds, and run a test. If the output looks good, activate the workflow. You'll now get a personalized literature digest every Monday morning.
+
+To submit this one, you can also take a screenshot of the workflow in relay.app, and upload it to the submission box on the course website. 
