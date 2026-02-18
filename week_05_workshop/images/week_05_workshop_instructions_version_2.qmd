@@ -321,8 +321,6 @@ To submit your work, take a screenshot showing your completed workflow in Relay.
 
 If you received an HTML report from the automation, you can add it to your GitHub Pages portfolio website under a section for this week's workshop.
 
-### Upload Your Report to GitHub
-
 1.  First, download the HTML report from the email attachment (if you haven't already).
 
 2.  Go to [github.com](https://github.com){target="_blank"}. Click your profile icon at the top right → **Your repositories**.
@@ -331,22 +329,18 @@ If you received an HTML report from the automation, you can add it to your GitHu
 
 3.  Locate and click on your portfolio repository (e.g., `graph-ai-portfolio`).
 
-4.  Click **Add file** → **Upload files**. 
+4.  Click **Add file** → **Upload files**. Drag in your HTML report file, then click **Commit changes**.
 
     ![](images/add_file_button.jpg){width="459"}
 
-5.  Drag your HTML report file into the box, then click **Commit changes**.
-
-### Update Your Portfolio with ChatGPT or Gemini
-
-1.  Go to ChatGPT, Gemini, or your preferred LLM and start typing a prompt like the one below. The parts in square brackets will need to be filled in with information you'll gather in the next steps.
+1.  Go to ChatGPT, Gemini, or your preferred LLM and paste a prompt like the one below, filling in the placeholders:
 
 ```         
-I want to update my portfolio website. In your response, you will provide the FULL updated HTML code for the index.html file.
+I want to update my portfolio website. In your response, provide the FULL updated HTML code for the index.html file.
 
-The portfolio website is hosted at 
+The portfolio website is hosted at:
 
-[YOUR PORTFOLIO WEBSITE URL HERE].
+[YOUR PORTFOLIO WEBSITE URL HERE]
 
 ---
 
@@ -362,60 +356,18 @@ The report is available at the link below. It is an HTML file, so reformat the l
 
 Below is my current HTML file:
 
-[PASTE THE ENTIRE HTML FILE HERE]
+[PASTE THE ENTIRE index.html CODE HERE]
 ```
 
-2.  Now, gather the information you need to complete the prompt:
+2.  To get **your portfolio website URL**, go to your repository → **Settings** → scroll to **GitHub Pages**. Your URL will be listed there.
 
-### Get Your Portfolio Website URL
+3.  To get **the direct link to your report**, go back to your repository's main page and right-click on the name of your uploaded report file → **Copy link address**.
 
--   To get your portfolio website URL, go to your portfolio repository on GitHub. You can do this by clicking on the "Repositories" button at the top right of the page and then clicking on your portfolio repository.
+4.  To get **your current index.html code**, navigate to your `index.html` file in the repository and use the **copy** button at the top right of the code view.
 
--   Click on the "Settings" tab.
+5.  Once you have all three pieces, send the prompt to the LLM. Review the output, then update your `index.html` on GitHub: click the **edit file** (pencil) button, replace all the code, and click **Commit changes**.
 
--   Scroll down to the "GitHub Pages" section.
-
--   Your portfolio website URL will be listed under "GitHub Pages". Copy and paste this into your prompt.
-
-    ![](images/github_pages_url.jpg){width="378"}
-
-### Get the Direct Link to Your Report
-
--   Go back to your portfolio repository's main page and right‑click on the name of your uploaded report then → **Copy link address**. Paste this into your prompt.
-
-    ![](images/copy_link_address_report.jpg){width="378"}
-
-### Copy Your Current index.html Code
-
--   Still in your portfolio repository, navigate to your index.html file.
-
-    ![](images/index_html.jpg){width="374"}
-
--   Copy all the code from the index.html file with the copy code button at the top right. Paste this into your prompt.
-
-    ![](images/copy_code_button.jpg){width="372"}
-
-### Send the Prompt and Update Your File
-
--   Now that you've filled in all the placeholders, send the prompt to ChatGPT or Gemini
-
--   Copy the new HTML that the LLM generated → return to your *index.html* on GitHub → click the **edit file** (✎) button at the top right.
-
-    ![](images/edit_file_button.jpg){width="452"}
-
--   Delete all the existing code in the file, then paste in the new code from ChatGPT or Gemini.
-
--   At the top right, click the **Commit changes** button.
-
--   Go to Actions tab (if you have GitHub Pages set up with Actions).
-
-    ![](images/actions_tab.jpg){width="380"}
-
--   Click on the latest build to observe the build process.
-
-    ![](images/pages_build.jpg){width="353"}
-
--   After the build is complete, your live site, if refreshed, should now show the new project entry and the link should work!
+6.  After a few minutes, visit your GitHub Pages URL and confirm the new workshop entry and link appear. You may need to hard-refresh the page (Ctrl+Shift+R or Cmd+Shift+R).
 
 ------------------------------------------------------------------------
 
