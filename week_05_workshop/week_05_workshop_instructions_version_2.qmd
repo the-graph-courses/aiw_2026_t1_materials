@@ -437,7 +437,7 @@ This challenge is less guided, with fewer screenshots. You'll need to be more in
 
 PubMed searches use Boolean operators. You can write one yourself if you're familiar with the syntax, or use an LLM to help.
 
-Pick a topic, for example:
+Pick a topic, for example :
 
 -   Any paper about arboviruses in a top 5 medical journal
 -   Generative AI and epidemiology
