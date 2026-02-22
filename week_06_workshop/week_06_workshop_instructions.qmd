@@ -7,7 +7,7 @@ format:
 author: "The Graph Courses"
 ---
 
-# Overview
+# Overviewweek 6 update
 
 In this session you will try two small but practical GenAI design workflows:
 
@@ -55,7 +55,7 @@ In this session you will try two small but practical GenAI design workflows:
 Create an elegant modern, abstract, minimalist flyer for the following event:
 ► Main headline: "Generative AI for Work & Research – AI Portfolio Showcase Day".
 ► Sub-headline: "Join us to see our cohort of AI learners are putting their skills to work".
-► Date and Time: Sunday, November 30, 5pm GMT or Wednesday, December 3, 3pm GMT
+► Date and Time: Sunday, March 8, 5pm GMT or Wednesday, March 11, 3pm GMT
 ► Our theme colors are light teal, dark teal, and yellow.
 ► To sign up, visit https://forms.gle/n9Xf8ocLd6JtWXUZA
 
