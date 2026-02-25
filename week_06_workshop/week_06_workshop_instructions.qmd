@@ -141,7 +141,7 @@ Choose one of the following two approaches (SVG or HTML) and give Claude the cor
 **Option 1: SVG Visual Abstract**
 
 ```         
-Create a rich, accurate, and visually appealing SVG code-based visual abstract of the following paper:
+Create a rich, accurate, and visually appealing SVG code-based visual abstract in landscape format of the following paper:
 
 [Paper Title]
 [Paper Abstract]
@@ -150,7 +150,7 @@ Create a rich, accurate, and visually appealing SVG code-based visual abstract o
 **Option 2: HTML Visual Abstract**
 
 ```         
-Create a rich, accurate, and visually appealing HTML visual abstract of the following paper:
+Create a rich, accurate, and visually appealing HTML visual abstract in landscape format of the following paper:
 
 [Paper Title]
 [Paper Abstract]
