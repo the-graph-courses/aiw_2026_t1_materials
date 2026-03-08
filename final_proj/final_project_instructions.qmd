@@ -8,7 +8,7 @@ author: "The Graph Courses"
 
 # Overview
 
-For your final project, you will design and present an AI solution relevant to your work, research or personal life, building on at least two modules from this course. You will deliver a **4- minute live presentation** and submit your slide deck.
+For your final project, you will design and present an AI solution relevant to your work, research or personal life, building on at least two modules from this course. You will deliver a **4-minute live presentation** that includes a **live demonstration** of your tool or application, supported by a short slide deck.
 
 We recommend that your project should use *at least two* different modules of the course:
 
@@ -29,13 +29,18 @@ The presentation will be on either Sunday, March 8, 5pm GMT or Wednesday, March 
 
 # Submission Instructions
 
-1.  **Prepare your slide deck** (PDF, PPTX or HTML) We recommend that your presentation should include the following sections, with these recommended (approximate) durations:
-    -   The problem or opportunity addressed (30 seconds)
-    -   Your solution and workflow (Live demonstration, screenshots or short video) (60 seconds)
-    -   Key features and AI tools used (60 seconds)
-    -   Discussion of current limitations and opportunities for improvement (60 seconds)
-2.  **Present live** in your assigned session (4 minutes)
-3.  **Upload your slide deck** to the submission page.
+1.  **Prepare a short slide deck** (PDF, PPTX or HTML) to frame your presentation. Your slides should briefly cover:
+    -   The problem or opportunity you are addressing
+    -   The AI tools and course modules you used
+    -   Current limitations and opportunities for improvement
+2.  **Give a live demo** of your tool or application during the presentation. This should be the centerpiece of your talk. We recommend the following approximate structure:
+    -   Introduction and context using slides (~1 minute)
+    -   **Live demonstration of your tool/application** (~2 minutes)
+    -   Wrap-up: limitations, reflections, and next steps using slides (~1 minute)
+3.  **Present live** in your assigned session (4 minutes total)
+4.  **Upload your slide deck** to the submission page.
+
+**Tip:** Have a backup plan (screenshots or a short recorded video) in case of technical difficulties during the live demo.
 
 # Grading Rubric
 
@@ -44,7 +49,7 @@ The presentation will be on either Sunday, March 8, 5pm GMT or Wednesday, March 
 | **Relevance** | Highly relevant to work/research; clear real-world value | Relevant; some real-world value | Somewhat relevant; value not fully clear | Not relevant or unclear value |
 | **AI Integration** | Creative, effective use of GenAI tools; integrates multiple features | Good use of GenAI tools; some integration | Basic use of GenAI tools | Minimal or unclear use of GenAI |
 | **Originality/Enhancement** | Strongly extends or customizes course example | Some extension/customization | Minor changes to example | Direct copy, little change |
-| **Presentation Quality** | Clear, engaging, well-structured; visuals support message | Clear and organized; some visuals | Adequate; some unclear points | Disorganized or unclear |
+| **Presentation & Demo Quality** | Clear, engaging presentation; compelling live demo of tool/application | Clear presentation; good demo with minor issues | Adequate presentation; demo somewhat unclear | Disorganized; no demo or demo fails without backup |
 | **Reflection & Next Steps** | Insightful reflection; clear next steps | Some reflection; next steps mentioned | Basic reflection | Little or no reflection |
 
 # Frequently Asked Questions
